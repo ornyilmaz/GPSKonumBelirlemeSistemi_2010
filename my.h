@@ -10,6 +10,7 @@
  ** Üniversite: Dumlupınar Üniversitesi						**
  ** Bölüm: Elektrik - Elektronik Mühendisliği 					**
  ** ----------------------------------------------------------------------------**
+ **										**
  ** Not: Danışman hocamın yardımıyla tamamladığım uart uygulamasına 		**
  ** değişiklikler yapılarak kütüphane haline getirildi.				**
  ** Şuan değişiklik yapmadan,fonksiyonlar çağırılarak standart kütüphane gibi 	**
@@ -19,17 +20,17 @@
 //******************************************************************************
 //  MSP430G2xx1 - Timer_A, Ultra-Low Pwr UART 9600, 32kHz ACLK
 //******************************************************************************
-#include "msp430g2231.h"
+#include "msp430.h"
  
 //------------------------------------------------------------------------------
 // Hardware-related definitions
 //------------------------------------------------------------------------------
 #ifndef UART_TXD
-#define UART_TXD   0x02 		// TXD on P1.1 (Timer0_A.OUT0)
+#define UART_TXD   0x02 	// TXD on P1.1 (Timer0_A.OUT0)
 #endif
  
 #ifndef UART_RXD
-#define UART_RXD   0x04                 // RXD on P1.2 (Timer0_A.CCI1A)
+#define UART_RXD   0x04         // RXD on P1.2 (Timer0_A.CCI1A)
 #endif
 //------------------------------------------------------------------------------
 // Conditions for 9600 Baud SW UART, SMCLK = 1MHz
@@ -59,7 +60,6 @@ void SendStr(char *string);
 unsigned char RecvByte(void);
 void RecvStr(char *msg, unsigned char n);
 void RecvStrTEMP(void);
- 
  
  
  
