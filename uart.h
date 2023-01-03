@@ -1,17 +1,18 @@
-/*************************************************************************************
- ** Proje Başlığı: GPS ile Konum Belirleme					    **
- ** Proje bağlantısı: http://www.mcu-turkey.com/?p=1938				    **
- **---------------------------------------------------------------------------------**
- ** Proje Yürütücüsü: Orhan YILMAZ						    **
- ** Danışman Hoca: Yrd.Doç.Dr.Ahmet ÖZMEN					    **
- ** Üniversite: Dumlupınar Üniversitesi						    **
- ** Bölüm: Elektrik - Elektronik Mühendisliği 					    **
- ** --------------------------------------------------------------------------------**
- ** Not: Danışman hocamın yardımıyla tamamladığım uart uygulamasına 		    **
- ** değişiklikler yapılarak kütüphane haline getirildi.				    **
- ** Şuan değişiklik yapmadan,fonksiyonlar çağırılarak standart kütüphane gibi 	    **
- ** kullanılabilir.								    **
- *************************************************************************************/
+/*****************************************************************************************
+ ** Proje Başlığı: GPS ile Konum Belirleme						**
+ ** Proje bağlantısı: http://www.mcu-turkey.com/?p=1938					**
+ **-------------------------------------------------------------------------------------**
+ ** Proje Yürütücüsü: Orhan YILMAZ							**
+ ** Danışman Hoca: Yrd.Doç.Dr.Ahmet ÖZMEN						**
+ ** Üniversite: Dumlupınar Üniversitesi							**
+ ** Bölüm: Elektrik - Elektronik Mühendisliği 						**
+ ** ------------------------------------------------------------------------------------**
+ **											**
+ ** Not: Danışman hocamın yardımıyla tamamladığım uart uygulamasına 			**
+ ** değişiklikler yapılarak kütüphane haline getirildi.					**
+ ** Şuan değişiklik yapmadan,fonksiyonlar çağırılarak standart kütüphane gibi 		**
+ ** kullanılabilir.									**
+ ****************************************************************************************/
  
 //***********************************************************************************
 //  MSP430G2xx1 Demo - Timer_A, Ultra-Low Pwr UART 9600, 32kHz ACLK
@@ -38,10 +39,10 @@ void uart(void)
  
     UARTInit();                     // Start Timer_A UART  (Timer_A UART Başladı)
  
-    SendStr("Merhabarn"); 		// Karşılama Mesajları Gönderiliyor...
-    SendStr("UART Kullanima Hazir.rn");
-    SendStr("GPS ile Konum Belirleme Projesi...rn");
-    SendStr("ORHAN YILMAZrnrnrn");
+ //   SendStr("Merhabarn"); 			// Karşılama Mesajları Gönderiliyor...
+ //   SendStr("UART Kullanima Hazir.rn");
+ //   SendStr("GPS ile Konum Belirleme Projesi...rn");
+    SendStr("ORHAN YILMAZrnMCU-TURKEYrn");
     /*//Test Fonksiyonu:
     for (;;)
     {
@@ -99,7 +100,7 @@ void RecvStr(char *msg, unsigned char n)
     for(i = 0; i < n - 2; i++){
     	__bis_SR_register(LPM0_bits);//Veri gelene kadar CPU'yu kapat(Düşük güç için)
    		*(msg + i) = rxBuffer;       //Karakterleri değişkene al
-   		if (rxBuffer == 'n') //Bitirme şartı gerçekleştiğinde döngüden çık
+   		if (rxBuffer == 'n')	//Bitirme şartı gerçekleştiğinde döngüden çık
    			break;
     }
    	*(msg + (i + 1)) = '\00';		//Satır sonu ekle
@@ -110,7 +111,7 @@ void RecvStr(char *msg, unsigned char n)
 //-----------------------------------------------------------------------------------
 void RecvStrTEMP(void)
 {
-    for (;;)
+    for (;
     {
     	__bis_SR_register(LPM0_bits);
    		if (rxBuffer == 'n')
@@ -182,6 +183,6 @@ __interrupt void Timer_A1_ISR(void)
             break;
     }
 }
-//-----------------------------------------------------------------------------------
-//Dumlupınar Üniversitesi	    ORHAN YILMAZ	    Dumlupınar Üniversitesi//
-//-----------------------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
+// Dumlupınar Üniversitesi		ORHAN YILMAZ    	Dumlupınar Üniversitesi
+//--------------------------------------------------------------------------------------
