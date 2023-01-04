@@ -19,7 +19,7 @@ GPS modülü olarak piyasada bulabileceğim, Sirfstar3 çipli ve seri port üzer
 Bu işlem MSP430 kontrolörün Rx – Tx haberleşme portu üzerinden direk haberleştirme işlemiyle başlıyor. Devamında alınan verilerin çözülmesi ve son olarak Lcd display’e yazılması işlemiyle son buluyor.
 
 ### C# Karşılama Ekranı
-![alt text](https://www.mcu-turkey.com/wp-content/uploads/2010/11/DPU_GPS0-300x237.jpg "C# Karşılama Ekranı")
+![alt text](https://www.mcu-turkey.com/wp-content/uploads/2010/11/DPU_GPS0.jpg "C# Karşılama Ekranı")
 
 ### C# Uygulama Ekranı
 ![alt text](https://www.mcu-turkey.com/wp-content/uploads/2010/11/DPU_GPS2.jpg "C# Uygulama Ekranı")
