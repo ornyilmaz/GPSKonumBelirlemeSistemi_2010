@@ -17,3 +17,9 @@ GPS Nedir: GPS (Global Positioning System; Küresel Konumlama Sistemi), düzenli
 
 GPS modülü olarak piyasada bulabileceğim, Sirfstar3 çipli ve seri port üzerinden direk çalıştırılabilen modülü kullanmayı düşündüm.
 Bu işlem MSP430 kontrolörün Rx – Tx haberleşme portu üzerinden direk haberleştirme işlemiyle başlıyor. Devamında alınan verilerin çözülmesi ve son olarak Lcd display’e yazılması işlemiyle son buluyor.
+
+### C# Karşılama Ekranı
+![alt text](https://www.mcu-turkey.com/wp-content/uploads/2010/11/DPU_GPS2.jpg "C# Karşılama Ekranı")
+
+### C# Uygulama Ekranı
+![alt text](https://www.mcu-turkey.com/wp-content/uploads/2010/11/DPU_GPS2.jpg "C# Karşılama Ekranı")
